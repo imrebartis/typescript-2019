@@ -23,3 +23,6 @@ carMakers.map((car: string): string => {
   return car.toUpperCase();
 })
 
+// flexible types
+const importantDates: (Date | string)[] = [new Date()];
+importantDates.push('2030-10-10');
