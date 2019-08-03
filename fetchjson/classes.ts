@@ -1,4 +1,6 @@
 class Vehicle {
+  constructor(public color: string) {}
+
   protected honk(): void {
     console.log('beep');
   }
@@ -15,6 +17,8 @@ class Car extends Vehicle {
   }
 }
 
-const car = new Car;
+const car = new Car('orange');
 car.startDrivingProcess();
-car.honk(); // no can do: honk() can be used only in Vehicle or its subclasses, since it's protected & not public
+// car.honk(); // no can do: honk() can be used only in Vehicle or its subclasses, since it's protected & not public
+
+console.log(car.color);
