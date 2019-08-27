@@ -1,2 +1,2 @@
 "use strict";
-console.log('ho');
+console.log(123);
