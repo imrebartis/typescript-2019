@@ -5,7 +5,9 @@ const user = new User({ name: "new record", age: 0 });
 console.log(user.get("name"));
 
 user.on("change", () => {
-  console.log("user was changed");
+  console.log("user was changed, we probably need to update some HTML");
 });
+
+user.set({ name: "new name" });
 
 user.trigger("change");
